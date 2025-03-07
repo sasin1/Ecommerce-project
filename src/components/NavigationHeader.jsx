@@ -8,21 +8,21 @@ function NavigationHeader() {
   const [user, setuser] = useState();
 
   return (
-    <Navbar fluid rounded>
-      <Navbar.Brand href="/">
+    <Navbar className="bg-teal-100 py-3">
+      <Navbar.Brand href="/" >
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGnmrgCWfgo_sMSRqHXnOKALHltLHZeny-4w&s"
           className="mr-3 h-6 sm:h-9"
-          alt="Flowbite React Logo"
+          alt="Ecommerce Logo"
         />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-gray-600">
-          Flowbite React
+        <span className="self-center  text-xl font-semibold">
+         Ecommerce App
         </span>
       </Navbar.Brand>
       <div className="flex md:order-2">
        {
         user?
-        //if user exist validation
+
         <Dropdown
         arrowIcon={false}
         inline
@@ -63,11 +63,11 @@ function NavigationHeader() {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="#" active>
+        <Navbar.Link href="/"  className="text-gray-800" >
           Home
         </Navbar.Link>
-        <Navbar.Link href="#">About</Navbar.Link>
-        <Navbar.Link href="#">Services</Navbar.Link>
+        <Navbar.Link href="/About">About</Navbar.Link>
+
         <Dropdown
         arrowIcon={false}
         inline
@@ -81,8 +81,8 @@ function NavigationHeader() {
         <Dropdown.Item href="/CategoriesList/Beauty">Beauty</Dropdown.Item>
         <Dropdown.Item href="/CategoriesList/Foods">Foods</Dropdown.Item>
       </Dropdown>
-        <Navbar.Link href="#">Pricing</Navbar.Link>
-        <Navbar.Link href="#">Contact</Navbar.Link>
+        <Navbar.Link href="/AllRpoducts">All Products</Navbar.Link>
+        <Navbar.Link href="/Contact">Contact</Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );
